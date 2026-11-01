@@ -4,9 +4,15 @@ Thanks for taking the time to contribute.
 
 ## Before you start
 
-- Search existing issues and pull requests.
+- Search existing issues, discussions, and pull requests.
 - For large changes, open an issue first so we can agree on the approach.
 - Keep the app focused: quiet, instant input source switching on macOS.
+
+## Where to ask
+
+- **Bug reports and concrete feature requests:** [open an issue](https://github.com/Nishikinodzuki/quietglobe/issues).
+- **Ideas, questions, and general feedback:** [GitHub Discussions](https://github.com/Nishikinodzuki/quietglobe/discussions) (Ideas / Q&A).
+- **Security issues:** do not open a public issue; see [SECURITY.md](SECURITY.md).
 
 ## Development
 

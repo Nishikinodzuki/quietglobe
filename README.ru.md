@@ -2,7 +2,7 @@
 
 **Убирает системный индикатор источника ввода macOS — окно ABC/Russian — для любой раскладки. Переключение по клавише 🌐 мгновенное: без окна, без HUD, без задержки.**
 
-[English](README.md) · **Русский** · [Установка](#установка) · [FAQ](#faq)
+[English](README.md) · **Русский** · [Установка](#установка) · [Обратная связь](#обратная-связь) · [FAQ](#faq)
 
 [![macOS 13+](https://img.shields.io/badge/macOS-13%2B-blue?style=flat-square)](https://www.apple.com/macos/)
 [![Swift](https://img.shields.io/badge/Swift-5.9-orange?style=flat-square)](https://swift.org)
@@ -150,9 +150,16 @@ cd quietglobe
 open QuietGlobe.app
 ```
 
+## Обратная связь
+
+- **Баги и конкретные фичреквесты:** [GitHub Issues](https://github.com/Nishikinodzuki/quietglobe/issues)
+- **Идеи и предложения:** [GitHub Discussions → Ideas](https://github.com/Nishikinodzuki/quietglobe/discussions/categories/ideas)
+- **Вопросы:** [GitHub Discussions → Q&A](https://github.com/Nishikinodzuki/quietglobe/discussions/categories/q-a)
+- **Уязвимости:** приватно через [SECURITY.md](SECURITY.md).
+
 ## Участие
 
-Issues и pull requests приветствуются. См. [CONTRIBUTING.md](CONTRIBUTING.md). Если QuietGlobe помог — поставьте звезду, это помогает другим найти проект.
+Pull requests приветствуются. См. [CONTRIBUTING.md](CONTRIBUTING.md). Если QuietGlobe помог — поставьте звезду, это помогает другим найти проект.
 
 ## Лицензия
 

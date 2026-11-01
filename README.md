@@ -2,7 +2,7 @@
 
 **Disable the system-wide macOS input source indicator — the ABC/Russian popup — for any keyboard layout. Switch input sources instantly with the 🌐 Globe key: no popup, no HUD, no delay.**
 
-**English** · [Русский](README.ru.md) · [Install](#install) · [FAQ](#faq)
+**English** · [Русский](README.ru.md) · [Install](#install) · [Feedback](#feedback) · [FAQ](#faq)
 
 [![macOS 13+](https://img.shields.io/badge/macOS-13%2B-blue?style=flat-square)](https://www.apple.com/macos/)
 [![Swift](https://img.shields.io/badge/Swift-5.9-orange?style=flat-square)](https://swift.org)
@@ -150,9 +150,16 @@ cd quietglobe
 open QuietGlobe.app
 ```
 
+## Feedback
+
+- **Bugs and concrete feature requests:** [GitHub Issues](https://github.com/Nishikinodzuki/quietglobe/issues)
+- **Ideas and suggestions:** [GitHub Discussions → Ideas](https://github.com/Nishikinodzuki/quietglobe/discussions/categories/ideas)
+- **Questions:** [GitHub Discussions → Q&A](https://github.com/Nishikinodzuki/quietglobe/discussions/categories/q-a)
+- **Security issues:** report privately via [SECURITY.md](SECURITY.md).
+
 ## Contributing
 
-Issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md). If QuietGlobe helped you, star the repo — it helps other people find it.
+Pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md). If QuietGlobe helped you, star the repo — it helps other people find it.
 
 ## License
 
