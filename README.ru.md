@@ -55,7 +55,15 @@ brew install quietglobe
 
 После установки откройте **QuietGlobe** из `/Applications` — приложение работает в менюбаре (без иконки в Dock).
 
-> **macOS просит доступ к связке ключей при установке?** Это Git (`git-credential-osxkeychain`), а не QuietGlobe. Tap публичный; нажмите **«Отказать»** — установка должна продолжиться. Если нет — используйте ручную установку ниже.
+### Если macOS просит доступ к связке ключей
+
+Это Git (`git-credential-osxkeychain`), а не QuietGlobe. Используйте установщик без окна:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Nishikinodzuki/quietglobe/main/scripts/brew-install.sh | bash
+```
+
+Он отключает Git credential helper для клонирования tap и пропускает auto-update. Или нажмите **«Отказать»** и используйте ручную установку ниже.
 
 ### Вручную
 
