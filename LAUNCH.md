@@ -1,14 +1,15 @@
 # QuietGlobe release checklist
 
-## Homebrew
+## Release
 
-- [ ] Create public `Nishikinodzuki/homebrew-tap` with `Casks/quietglobe.rb`.
-- [ ] Publish a GitHub Release with the signed `QuietGlobe-1.0.0.zip`.
+- [ ] Build the Universal 2 app with a stable signing identity.
+- [ ] Create `QuietGlobe-<version>.zip`.
+- [ ] Update `VERSION` and `SHA256` in `install.sh`.
+- [ ] Publish a GitHub Release with the zip.
 - [ ] Verify:
   ```bash
-  brew install Nishikinodzuki/tap/quietglobe
+  curl -fsSL https://raw.githubusercontent.com/Nishikinodzuki/quietglobe/main/install.sh | bash
   ```
-- [ ] After notarization, submit a PR to `Homebrew/homebrew-cask`.
 
 ## Post-release
 

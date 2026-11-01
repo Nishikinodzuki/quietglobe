@@ -7,7 +7,6 @@
 [![macOS 13+](https://img.shields.io/badge/macOS-13%2B-blue?style=flat-square)](https://www.apple.com/macos/)
 [![Swift](https://img.shields.io/badge/Swift-5.9-orange?style=flat-square)](https://swift.org)
 [![MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-[![Homebrew](https://img.shields.io/badge/Homebrew-cask-yellow?style=flat-square)](https://brew.sh)
 
 ![QuietGlobe до и после: слева окно ABC/Russian на macOS, справа мгновенное переключение без окна](docs/assets/quietglobe-before-after-ru.png)
 
@@ -38,32 +37,15 @@
 
 ## Установка
 
-### Homebrew (рекомендуется)
+### Установщик одной командой (рекомендуется)
 
 ```bash
-brew install Nishikinodzuki/tap/quietglobe
+curl -fsSL https://raw.githubusercontent.com/Nishikinodzuki/quietglobe/main/install.sh | bash
 ```
 
-Или с явным tap:
+Он скачивает Universal 2 сборку, проверяет SHA-256, ставит в `/Applications` (или `~/Applications`, если нужно), снимает quarantine и открывает QuietGlobe.
 
-```bash
-brew tap Nishikinodzuki/tap
-brew install quietglobe
-```
-
-> В Homebrew 7+ cask определяется автоматически. В более старых версиях добавьте `--cask` к команде установки.
-
-После установки откройте **QuietGlobe** из `/Applications` — приложение работает в менюбаре (без иконки в Dock).
-
-### Если macOS просит доступ к связке ключей
-
-Это Git (`git-credential-osxkeychain`), а не QuietGlobe. Используйте установщик без окна:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/Nishikinodzuki/quietglobe/main/scripts/brew-install.sh | bash
-```
-
-Он отключает Git credential helper для клонирования tap и пропускает auto-update. Или нажмите **«Отказать»** и используйте ручную установку ниже.
+После установки откройте **QuietGlobe** из `/Applications`, если он не открылся сам — приложение работает в менюбаре (без иконки в Dock).
 
 ### Вручную
 
@@ -128,7 +110,7 @@ macOS показывает его при смене раскладки по 🌐
 
 ### Как удалить QuietGlobe?
 
-Завершите QuietGlobe, удалите его из `/Applications` и отключите/удалите в **System Settings → Privacy & Security → Accessibility**. Если ставили через Homebrew: `brew uninstall --cask quietglobe`.
+Завершите QuietGlobe, удалите его из `/Applications` и отключите/удалите в **System Settings → Privacy & Security → Accessibility**.
 
 ### QuietGlobe работает на macOS 13, 14, 15, 26 и 27?
 
