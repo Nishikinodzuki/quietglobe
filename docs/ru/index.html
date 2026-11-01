@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuietGlobe — убрать окно ABC/Russian на macOS | Мгновенное переключение раскладки</title>
+  <meta name="description" content="QuietGlobe убирает всплывающее окно ABC/Russian при смене раскладки на macOS и переключает язык мгновенно по клавише 🌐. Бесплатно, open source, установка через Homebrew. macOS 13+.">
+  <meta name="keywords" content="убрать окно ABC Russian macOS, индикатор раскладки macOS, всплывающее окно смены языка, Globe key HUD, переключение раскладки без окна, QuietGlobe, macOS 13">
+  <meta name="author" content="Nishikinodzuki">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#0b0f17">
+
+  <link rel="canonical" href="https://nishikinodzuki.github.io/quietglobe/ru/">
+  <link rel="alternate" hreflang="en" href="https://nishikinodzuki.github.io/quietglobe/">
+  <link rel="alternate" hreflang="ru" href="https://nishikinodzuki.github.io/quietglobe/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://nishikinodzuki.github.io/quietglobe/">
+  <link rel="icon" href="../assets/quietglobe-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/quietglobe-icon.png">
+  <link rel="stylesheet" href="../style.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QuietGlobe">
+  <meta property="og:title" content="QuietGlobe — убрать окно ABC/Russian на macOS">
+  <meta property="og:description" content="Мгновенное переключение раскладки по клавише 🌐 без окна ABC/Russian. Бесплатно и open source.">
+  <meta property="og:url" content="https://nishikinodzuki.github.io/quietglobe/ru/">
+  <meta property="og:image" content="https://nishikinodzuki.github.io/quietglobe/assets/og-image-ru.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="QuietGlobe — убрать окно ABC/Russian на macOS">
+  <meta name="twitter:description" content="Мгновенное переключение раскладки без всплывающего окна ABC/Russian.">
+  <meta name="twitter:image" content="https://nishikinodzuki.github.io/quietglobe/assets/og-image-ru.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "QuietGlobe",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 13+",
+        "description": "QuietGlobe убирает всплывающее окно ABC/Russian на macOS и мгновенно переключает раскладку по клавише 🌐.",
+        "url": "https://nishikinodzuki.github.io/quietglobe/ru/",
+        "downloadUrl": "https://github.com/Nishikinodzuki/quietglobe/releases/latest",
+        "softwareVersion": "1.0.0",
+        "license": "https://opensource.org/licenses/MIT",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Nishikinodzuki",
+          "url": "https://github.com/Nishikinodzuki"
+        },
+        "screenshot": "https://nishikinodzuki.github.io/quietglobe/assets/quietglobe-before-after-ru.png",
+        "inLanguage": "ru"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Как убрать окно ABC/Russian на macOS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Установите QuietGlobe, выдайте разрешение Accessibility и оставьте 🌐 в режиме Change Input Source. QuietGlobe сам переключает раскладку и подавляет индикатор. Штатной настройки macOS, которая убирает это окно, нет."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Почему macOS показывает индикатор источника ввода?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "macOS показывает индикатор при смене раскладки по 🌐 или горячей клавише. Он должен подтверждать новую раскладку, но часто висит на экране до начала печати."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Зачем QuietGlobe разрешение Accessibility?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Чтобы перехватить 🌐 до появления системного HUD, QuietGlobe использует event tap macOS. Для глобального перехвата клавиш macOS требует Accessibility. QuietGlobe не читает, не хранит и не отправляет нажатия."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "QuietGlobe бесплатный?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. QuietGlobe бесплатный и открытый, под лицензией MIT. Без рекламы, подписок и аналитики."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "QuietGlobe работает на macOS 13, 14, 15, 26 и 27?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да, QuietGlobe рассчитан на macOS 13 Ventura и новее. Собирается как Universal 2 для Apple Silicon и Intel."
+            }
+          }
+        ],
+        "inLanguage": "ru"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Основная навигация">
+      <a class="brand" href="../">
+        <img src="../assets/quietglobe-icon.png" alt="Иконка приложения QuietGlobe" width="28" height="28">
+        QuietGlobe
+      </a>
+      <div class="nav-links">
+        <a href="#problem">Проблема</a>
+        <a href="#demo">Демо</a>
+        <a href="#install">Установка</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/Nishikinodzuki/quietglobe">GitHub</a>
+        <a href="../" hreflang="en" lang="en">EN</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="eyebrow">утилита для macOS · open source</p>
+      <h1>Уберите окно <span class="accent">ABC/Russian</span> на macOS</h1>
+      <p class="lead">QuietGlobe мгновенно переключает раскладку по клавише 🌐 и убирает индикатор источника ввода. Та же клавиша, без окна и задержки.</p>
+
+      <div class="install-box">
+        <code id="brew">brew install --cask Nishikinodzuki/quietglobe/quietglobe</code>
+        <button type="button" data-copy="brew install --cask Nishikinodzuki/quietglobe/quietglobe" aria-label="Скопировать команду Homebrew">Копировать</button>
+      </div>
+
+      <div class="cta">
+        <a class="button primary" href="https://github.com/Nishikinodzuki/quietglobe/releases/latest">Скачать</a>
+        <a class="button" href="https://github.com/Nishikinodzuki/quietglobe">Звезда на GitHub</a>
+      </div>
+      <p class="meta">macOS 13+ · Apple Silicon и Intel · MIT · Бесплатно</p>
+
+      <img class="hero-image" src="../assets/quietglobe-before-after-ru.png" alt="QuietGlobe до и после: слева окно ABC/Russian на macOS, справа мгновенное переключение без окна" width="1600" height="640">
+    </section>
+
+    <section id="problem" class="section container">
+      <h2>Окно ABC/Russian — это не просто косметика</h2>
+      <div class="split">
+        <div>
+          <p>При нажатии 🌐 на macOS появляется плавающий <strong>индикатор источника ввода</strong> с «ABC» / «Russian». Он перекрывает текст, висит на экране до начала печати и мешает записи экрана и демонстрациям.</p>
+          <p>Штатной настройки macOS, которая убирает это окно, нет. Поэтому и существует QuietGlobe.</p>
+          <ul>
+            <li>Никакого окна по центру экрана.</li>
+            <li>Никакой задержки между нажатием и сменой раскладки.</li>
+            <li>Без приватных API, сети и телеметрии.</li>
+          </ul>
+        </div>
+        <img src="../assets/macos-input-source-indicator.png" alt="Индикатор источника ввода macOS с раскладками ABC и Russian" width="494" height="320" loading="lazy">
+      </div>
+    </section>
+
+    <section id="demo" class="section container">
+      <h2>Разница видна</h2>
+      <p>Слева — стандартное окно ABC/Russian. Справа — QuietGlobe: то же нажатие, мгновенная смена, без окна.</p>
+      <img class="demo" src="../assets/quietglobe-demo.gif" alt="Демо QuietGlobe: печать с окном ABC/Russian и без него" width="1200" height="390" loading="lazy">
+    </section>
+
+    <section class="section container">
+      <h2>Почему QuietGlobe</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Мгновенно</h3>
+          <p>Переключает раскладку через публичный Text Input Sources API — без анимации, HUD и задержки.</p>
+        </article>
+        <article class="card">
+          <h3>Нативно и открыто</h3>
+          <p>Swift, event tap из CoreGraphics, без приватных фреймворков. Исходный код на GitHub под MIT.</p>
+        </article>
+        <article class="card">
+          <h3>Приватно</h3>
+          <p>Без сети, аналитики и логирования нажатий. Ввод остаётся на вашем Mac.</p>
+        </article>
+      </div>
+      <p class="note">QuietGlobe живёт в менюбаре. Клик по глобусу — включить/выключить перехват, автозапуск, настройки Accessibility или выход.</p>
+    </section>
+
+    <section id="install" class="section container">
+      <h2>Установка через Homebrew</h2>
+      <pre><code>brew install --cask Nishikinodzuki/quietglobe/quietglobe</code></pre>
+      <p>Или скачайте последний релиз и перенесите <code>QuietGlobe.app</code> в <code>/Applications</code>.</p>
+
+      <h3>Первый запуск</h3>
+      <ol>
+        <li>Откройте QuietGlobe.</li>
+        <li>macOS попросит разрешение Accessibility.</li>
+        <li>Включите QuietGlobe в <strong>System Settings → Privacy &amp; Security → Accessibility</strong>.</li>
+        <li>Приложение само увидит разрешение и запустится.</li>
+      </ol>
+      <p class="note">macOS не позволяет выдать Accessibility автоматически. Это системное требование безопасности.</p>
+    </section>
+
+    <section id="faq" class="section container">
+      <h2>FAQ</h2>
+
+      <details>
+        <summary>Как убрать окно ABC/Russian на macOS?</summary>
+        <p>Установите QuietGlobe, выдайте разрешение Accessibility и оставьте 🌐 в режиме «Change Input Source». QuietGlobe сам переключает раскладку и подавляет индикатор. Штатной настройки macOS, которая убирает это окно, нет.</p>
+      </details>
+
+      <details>
+        <summary>Почему macOS показывает индикатор источника ввода?</summary>
+        <p>macOS показывает его при смене раскладки по 🌐 или горячей клавише. Он должен подтверждать новую раскладку, но часто висит на экране до начала печати и мешает.</p>
+      </details>
+
+      <details>
+        <summary>Зачем QuietGlobe разрешение Accessibility?</summary>
+        <p>Чтобы перехватить 🌐 до появления системного HUD, QuietGlobe использует event tap macOS. Для глобального перехвата клавиш macOS требует Accessibility. QuietGlobe не читает, не хранит и не отправляет нажатия.</p>
+      </details>
+
+      <details>
+        <summary>QuietGlobe бесплатный?</summary>
+        <p>Да. QuietGlobe бесплатный и открытый, под лицензией MIT. Без рекламы, подписок и аналитики.</p>
+      </details>
+
+      <details>
+        <summary>QuietGlobe работает на macOS 13, 14, 15, 26 и 27?</summary>
+        <p>Да, QuietGlobe рассчитан на macOS 13 Ventura и новее. Собирается как Universal 2 для Apple Silicon и Intel.</p>
+      </details>
+    </section>
+
+    <section class="section container">
+      <h2>Поддерживаемые версии macOS</h2>
+      <table>
+        <thead>
+          <tr><th>macOS</th><th>Статус</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>macOS 13 Ventura</td><td>Поддерживается</td></tr>
+          <tr><td>macOS 14 Sonoma</td><td>Поддерживается</td></tr>
+          <tr><td>macOS 15 Sequoia</td><td>Поддерживается</td></tr>
+          <tr><td>macOS 26 / 27</td><td>Поддерживается (проверено на 27.2)</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot">
+      <span>MIT © Nishikinodzuki · QuietGlobe не связан с Apple.</span>
+      <span>
+        <a href="https://github.com/Nishikinodzuki/quietglobe">GitHub</a> ·
+        <a href="https://github.com/Nishikinodzuki/quietglobe/releases/latest">Релизы</a> ·
+        <a href="../" hreflang="en" lang="en">English</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('[data-copy]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var text = button.getAttribute('data-copy');
+        if (!navigator.clipboard) return;
+        navigator.clipboard.writeText(text).then(function () {
+          var old = button.textContent;
+          button.textContent = 'Скопировано';
+          setTimeout(function () { button.textContent = old; }, 1500);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

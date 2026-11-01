@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuietGlobe — Disable the ABC/Russian Popup on macOS</title>
+  <meta name="description" content="QuietGlobe removes the annoying ABC/Russian input source popup on macOS and switches keyboard layouts instantly with the Globe key. Free, open source, Homebrew install for macOS 13+.">
+  <meta name="keywords" content="macOS input source indicator, disable ABC Russian popup, Globe key HUD, language switcher popup macOS, hide input source HUD, macOS keyboard layout switcher, QuietGlobe">
+  <meta name="author" content="Nishikinodzuki">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#0b0f17">
+
+  <link rel="canonical" href="https://nishikinodzuki.github.io/quietglobe/">
+  <link rel="alternate" hreflang="en" href="https://nishikinodzuki.github.io/quietglobe/">
+  <link rel="alternate" hreflang="ru" href="https://nishikinodzuki.github.io/quietglobe/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://nishikinodzuki.github.io/quietglobe/">
+  <link rel="icon" href="assets/quietglobe-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/quietglobe-icon.png">
+  <link rel="stylesheet" href="style.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QuietGlobe">
+  <meta property="og:title" content="QuietGlobe — Disable the ABC/Russian Popup on macOS">
+  <meta property="og:description" content="Switch macOS keyboard layouts instantly with the Globe key. No ABC/Russian popup, no HUD, no delay. Free and open source.">
+  <meta property="og:url" content="https://nishikinodzuki.github.io/quietglobe/">
+  <meta property="og:image" content="https://nishikinodzuki.github.io/quietglobe/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="QuietGlobe — Disable the ABC/Russian Popup on macOS">
+  <meta name="twitter:description" content="Instant, HUD-free input source switching for macOS. Same Globe key, no ABC/Russian popup.">
+  <meta name="twitter:image" content="https://nishikinodzuki.github.io/quietglobe/assets/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "QuietGlobe",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 13+",
+        "description": "QuietGlobe disables the ABC/Russian input source popup on macOS and switches keyboard layouts instantly with the Globe key.",
+        "url": "https://nishikinodzuki.github.io/quietglobe/",
+        "downloadUrl": "https://github.com/Nishikinodzuki/quietglobe/releases/latest",
+        "softwareVersion": "1.0.0",
+        "license": "https://opensource.org/licenses/MIT",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Nishikinodzuki",
+          "url": "https://github.com/Nishikinodzuki"
+        },
+        "screenshot": "https://nishikinodzuki.github.io/quietglobe/assets/quietglobe-before-after.png",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I disable the ABC/Russian popup on macOS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Install QuietGlobe, grant Accessibility permission, and keep the Globe key set to Change Input Source. QuietGlobe switches the layout itself and suppresses the macOS input source indicator. There is no supported macOS setting that removes this popup."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does macOS show the input source indicator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "macOS shows the indicator when the input source changes via the Globe key or a keyboard shortcut. It is meant to confirm the new layout, but it often stays on screen until you type, which interrupts typing and screen recordings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does QuietGlobe need Accessibility permission?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To intercept the Globe key before the system HUD appears, QuietGlobe uses a macOS event tap. macOS requires Accessibility permission for global keyboard event taps. QuietGlobe does not read, store, or send your keystrokes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is QuietGlobe free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. QuietGlobe is free and open source under the MIT license. There are no ads, subscriptions, or analytics."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does QuietGlobe work on macOS 13, 14, 15, 26, and 27?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, QuietGlobe targets macOS 13 Ventura and later. It is built as a Universal 2 binary for Apple Silicon and Intel Macs."
+            }
+          }
+        ],
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="./">
+        <img src="assets/quietglobe-icon.png" alt="QuietGlobe app icon" width="28" height="28">
+        QuietGlobe
+      </a>
+      <div class="nav-links">
+        <a href="#problem">Problem</a>
+        <a href="#demo">Demo</a>
+        <a href="#install">Install</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/Nishikinodzuki/quietglobe">GitHub</a>
+        <a href="ru/" hreflang="ru" lang="ru">RU</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="eyebrow">macOS utility · open source</p>
+      <h1>Disable the <span class="accent">ABC/Russian popup</span> on macOS</h1>
+      <p class="lead">QuietGlobe switches keyboard layouts instantly with the 🌐 Globe key and removes the input source indicator. Same key, no HUD, no delay.</p>
+
+      <div class="install-box">
+        <code id="brew">brew install --cask Nishikinodzuki/quietglobe/quietglobe</code>
+        <button type="button" data-copy="brew install --cask Nishikinodzuki/quietglobe/quietglobe" aria-label="Copy Homebrew command">Copy</button>
+      </div>
+
+      <div class="cta">
+        <a class="button primary" href="https://github.com/Nishikinodzuki/quietglobe/releases/latest">Download</a>
+        <a class="button" href="https://github.com/Nishikinodzuki/quietglobe">Star on GitHub</a>
+      </div>
+      <p class="meta">macOS 13+ · Apple Silicon &amp; Intel · MIT · Free</p>
+
+      <img class="hero-image" src="assets/quietglobe-before-after.png" alt="QuietGlobe before and after: the macOS ABC/Russian input source popup on the left, instant switching without a popup on the right" width="1600" height="640">
+    </section>
+
+    <section id="problem" class="section container">
+      <h2>The ABC/Russian popup is not just annoying</h2>
+      <div class="split">
+        <div>
+          <p>When you press the 🌐 Globe key on macOS, the system shows a floating <strong>input source indicator</strong> with “ABC” / “Russian”. It covers your text, stays on screen until you type, and interrupts recordings and demos.</p>
+          <p>There is no supported macOS setting to disable it. That is why QuietGlobe exists.</p>
+          <ul>
+            <li>No more popup in the middle of the screen.</li>
+            <li>No delay between key press and layout switch.</li>
+            <li>No private APIs, network, or telemetry.</li>
+          </ul>
+        </div>
+        <img src="assets/macos-input-source-indicator.png" alt="macOS input source indicator showing ABC and Russian keyboard layouts" width="494" height="320" loading="lazy">
+      </div>
+    </section>
+
+    <section id="demo" class="section container">
+      <h2>See the difference</h2>
+      <p>Left: the standard macOS ABC/Russian popup. Right: QuietGlobe — same keystroke, instant switch, no popup.</p>
+      <img class="demo" src="assets/quietglobe-demo.gif" alt="QuietGlobe demo: typing with the macOS ABC/Russian popup and without it" width="1200" height="390" loading="lazy">
+    </section>
+
+    <section class="section container">
+      <h2>Why QuietGlobe</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Instant</h3>
+          <p>Switches input sources with the public Text Input Sources API — no animation, no HUD, no delay.</p>
+        </article>
+        <article class="card">
+          <h3>Native &amp; open</h3>
+          <p>Swift, CoreGraphics event tap, no private frameworks. The source is on GitHub under MIT.</p>
+        </article>
+        <article class="card">
+          <h3>Private</h3>
+          <p>No network, no analytics, no keystroke logging. Your typing stays on your Mac.</p>
+        </article>
+      </div>
+      <p class="note">QuietGlobe lives in the menu bar. Click the globe to toggle interception, launch at login, open Accessibility settings, or quit.</p>
+    </section>
+
+    <section id="install" class="section container">
+      <h2>Install with Homebrew</h2>
+      <pre><code>brew install --cask Nishikinodzuki/quietglobe/quietglobe</code></pre>
+      <p>Or download the latest release and move <code>QuietGlobe.app</code> to <code>/Applications</code>.</p>
+
+      <h3>First launch</h3>
+      <ol>
+        <li>Open QuietGlobe.</li>
+        <li>macOS asks for Accessibility permission.</li>
+        <li>Enable QuietGlobe in <strong>System Settings → Privacy &amp; Security → Accessibility</strong>.</li>
+        <li>The app detects the permission and starts automatically.</li>
+      </ol>
+      <p class="note">Accessibility cannot be granted automatically by macOS. This is a system security requirement.</p>
+    </section>
+
+    <section id="faq" class="section container">
+      <h2>FAQ</h2>
+
+      <details>
+        <summary>How do I disable the ABC/Russian popup on macOS?</summary>
+        <p>Install QuietGlobe, grant Accessibility permission, and keep the Globe key set to “Change Input Source”. QuietGlobe switches the layout itself and suppresses the macOS input source indicator. There is no supported macOS setting that removes this popup.</p>
+      </details>
+
+      <details>
+        <summary>Why does macOS show the input source indicator?</summary>
+        <p>macOS shows the indicator when the input source changes via the Globe key or a keyboard shortcut. It is meant to confirm the new layout, but it often stays on screen until you type, which interrupts typing and screen recordings.</p>
+      </details>
+
+      <details>
+        <summary>Why does QuietGlobe need Accessibility permission?</summary>
+        <p>To intercept the Globe key before the system HUD appears, QuietGlobe uses a macOS event tap. macOS requires Accessibility permission for global keyboard event taps. QuietGlobe does not read, store, or send your keystrokes.</p>
+      </details>
+
+      <details>
+        <summary>Is QuietGlobe free?</summary>
+        <p>Yes. QuietGlobe is free and open source under the MIT license. There are no ads, subscriptions, or analytics.</p>
+      </details>
+
+      <details>
+        <summary>Does QuietGlobe work on macOS 13, 14, 15, 26, and 27?</summary>
+        <p>Yes, QuietGlobe targets macOS 13 Ventura and later. It is built as a Universal 2 binary for Apple Silicon and Intel Macs.</p>
+      </details>
+    </section>
+
+    <section class="section container">
+      <h2>Supported macOS</h2>
+      <table>
+        <thead>
+          <tr><th>macOS</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>macOS 13 Ventura</td><td>Supported</td></tr>
+          <tr><td>macOS 14 Sonoma</td><td>Supported</td></tr>
+          <tr><td>macOS 15 Sequoia</td><td>Supported</td></tr>
+          <tr><td>macOS 26 / 27</td><td>Supported (tested on 27.2)</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot">
+      <span>MIT © Nishikinodzuki · QuietGlobe is not affiliated with Apple.</span>
+      <span>
+        <a href="https://github.com/Nishikinodzuki/quietglobe">GitHub</a> ·
+        <a href="https://github.com/Nishikinodzuki/quietglobe/releases/latest">Releases</a> ·
+        <a href="ru/" hreflang="ru" lang="ru">Русский</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('[data-copy]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var text = button.getAttribute('data-copy');
+        if (!navigator.clipboard) return;
+        navigator.clipboard.writeText(text).then(function () {
+          var old = button.textContent;
+          button.textContent = 'Copied';
+          setTimeout(function () { button.textContent = old; }, 1500);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
