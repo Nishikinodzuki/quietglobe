@@ -1,8 +1,8 @@
 # QuietGlobe
 
-**Disable the ABC/Russian popup on macOS. Switch input sources instantly with the 🌐 Globe key — no input source indicator, no HUD, no delay.**
+**Disable the system-wide macOS input source indicator — the ABC/Russian popup — for any keyboard layout. Switch input sources instantly with the 🌐 Globe key: no popup, no HUD, no delay.**
 
-**English** · [Русский](README.ru.md) · [Website](https://nishikinodzuki.github.io/quietglobe/) · [Install](#install) · [FAQ](#faq)
+**English** · [Русский](README.ru.md) · [Install](#install) · [FAQ](#faq)
 
 [![macOS 13+](https://img.shields.io/badge/macOS-13%2B-blue?style=flat-square)](https://www.apple.com/macos/)
 [![Swift](https://img.shields.io/badge/Swift-5.9-orange?style=flat-square)](https://swift.org)
@@ -13,7 +13,7 @@
 
 ## The problem
 
-On macOS, when you press the 🌐 Globe (Fn) key to switch between keyboard layouts like **ABC** and **Russian**, the system can show a floating **input source indicator** — a small window with “ABC” / “Russian” in the middle of the screen.
+On macOS, when you press the 🌐 Globe (Fn) key to switch between keyboard layouts — **ABC ↔ Russian**, **ABC ↔ German**, or any other enabled pair — the system can show a floating **input source indicator** with the layout names. It is system-wide: the popup appears for any enabled keyboard layout, not only ABC/Russian.
 
 It is not just cosmetic:
 
@@ -29,27 +29,29 @@ If you searched for **“disable ABC/Russian popup macOS”**, **“macOS input 
 
 **QuietGlobe** intercepts the Globe key, switches the keyboard layout instantly with the public macOS Text Input Sources API, and suppresses the HUD. You keep the same key, but the switch is silent.
 
-- Works with **ABC**, **Russian**, and other keyboard layouts.
+- Works with **every enabled keyboard layout** — ABC, Russian, German, French, and more.
 - No popup. No delay.
 - Native Swift, no private APIs, no network, no telemetry.
 - Open source (MIT).
 
-![QuietGlobe demo: typing with and without the input source popup](docs/assets/quietglobe-demo.gif)
+![QuietGlobe demo: typing "Привет, мир!" with and without the input source popup](docs/assets/quietglobe-demo.gif)
 
 ## Install
 
 ### Homebrew (recommended)
 
 ```bash
-brew install --cask Nishikinodzuki/quietglobe/quietglobe
+brew install Nishikinodzuki/tap/quietglobe
 ```
 
 Or with an explicit tap:
 
 ```bash
-brew tap Nishikinodzuki/quietglobe
-brew install --cask quietglobe
+brew tap Nishikinodzuki/tap
+brew install quietglobe
 ```
+
+> Homebrew 7+ detects casks automatically. On older versions, add `--cask` to the install command.
 
 ### Manual
 
@@ -90,7 +92,7 @@ Download the latest `QuietGlobe-*.zip` from [GitHub Releases](https://github.com
 
 ### How do I disable the ABC/Russian popup on macOS?
 
-Install QuietGlobe, grant Accessibility permission, and keep the Globe key set to “Change Input Source”. QuietGlobe switches the layout itself and suppresses the macOS input source indicator. There is no supported macOS setting that removes this popup, which is why QuietGlobe exists.
+Install QuietGlobe, grant Accessibility permission, and keep the Globe key set to “Change Input Source”. QuietGlobe switches the layout itself and suppresses the macOS input source indicator. This works for every enabled keyboard layout, not only ABC/Russian. There is no supported macOS setting that removes this popup, which is why QuietGlobe exists.
 
 ### Why does macOS show the input source indicator?
 

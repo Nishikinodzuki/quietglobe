@@ -1,8 +1,8 @@
 # QuietGlobe
 
-**Убирает окно ABC/Russian на macOS. Переключение раскладки по клавише 🌐 — мгновенно, без индикатора и HUD.**
+**Убирает системный индикатор источника ввода macOS — окно ABC/Russian — для любой раскладки. Переключение по клавише 🌐 мгновенное: без окна, без HUD, без задержки.**
 
-[English](README.md) · **Русский** · [Сайт](https://nishikinodzuki.github.io/quietglobe/ru/) · [Установка](#установка) · [FAQ](#faq)
+[English](README.md) · **Русский** · [Установка](#установка) · [FAQ](#faq)
 
 [![macOS 13+](https://img.shields.io/badge/macOS-13%2B-blue?style=flat-square)](https://www.apple.com/macos/)
 [![Swift](https://img.shields.io/badge/Swift-5.9-orange?style=flat-square)](https://swift.org)
@@ -13,7 +13,7 @@
 
 ## Проблема
 
-На macOS при нажатии 🌐 (Globe/Fn) для смены раскладки **ABC ↔ Russian** по центру экрана появляется всплывающий **индикатор источника ввода** — небольшое окно с «ABC» / «Russian».
+На macOS при нажатии 🌐 (Globe/Fn) для смены раскладки — **ABC ↔ Russian**, **ABC ↔ German** или любой другой включённой пары — по центру экрана появляется всплывающий **индикатор источника ввода** с названиями раскладок. Он системный: окно появляется для любой включённой раскладки, а не только ABC/Russian.
 
 Это не просто косметика:
 
@@ -29,27 +29,29 @@
 
 **QuietGlobe** перехватывает клавишу 🌐, мгновенно переключает раскладку через публичный API macOS Text Input Sources и подавляет HUD. Клавиша остаётся той же, но переключение становится тихим.
 
-- Работает с **ABC**, **Russian** и другими раскладками.
+- Работает с **любой включённой раскладкой** — ABC, Russian, German, French и другими.
 - Никакого окна. Никакой задержки.
 - Нативный Swift, без приватных API, без сети и телеметрии.
 - Открытый исходный код (MIT).
 
-![Демо QuietGlobe: печать с окном ABC/Russian и без него](docs/assets/quietglobe-demo.gif)
+![Демо QuietGlobe: печать «Привет, мир!» с окном ABC/Russian и без него](docs/assets/quietglobe-demo.gif)
 
 ## Установка
 
 ### Homebrew (рекомендуется)
 
 ```bash
-brew install --cask Nishikinodzuki/quietglobe/quietglobe
+brew install Nishikinodzuki/tap/quietglobe
 ```
 
 Или с явным tap:
 
 ```bash
-brew tap Nishikinodzuki/quietglobe
-brew install --cask quietglobe
+brew tap Nishikinodzuki/tap
+brew install quietglobe
 ```
+
+> В Homebrew 7+ cask определяется автоматически. В более старых версиях добавьте `--cask` к команде установки.
 
 ### Вручную
 
@@ -90,7 +92,7 @@ brew install --cask quietglobe
 
 ### Как убрать окно ABC/Russian на macOS?
 
-Установите QuietGlobe, выдайте разрешение Accessibility и оставьте 🌐 в режиме «Change Input Source». QuietGlobe сам переключает раскладку и подавляет индикатор. Штатной настройки macOS, которая убирает это окно, нет — поэтому и существует QuietGlobe.
+Установите QuietGlobe, выдайте разрешение Accessibility и оставьте 🌐 в режиме «Change Input Source». QuietGlobe сам переключает раскладку и подавляет индикатор. Это работает для любой включённой раскладки, а не только ABC/Russian. Штатной настройки macOS, которая убирает это окно, нет — поэтому и существует QuietGlobe.
 
 ### Почему macOS показывает индикатор источника ввода?
 

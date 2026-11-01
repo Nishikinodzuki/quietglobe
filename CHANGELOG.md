@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] - TBD
+## [1.0.0] - 2026-11-01
 
 ### Added
 
@@ -16,5 +16,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Suppression of the macOS ABC/Russian input source indicator (HUD).
 - Menu bar app with onboarding and launch-at-login.
 - Universal 2 build for Apple Silicon and Intel.
-- Homebrew cask distribution.
+- Homebrew cask distribution via the `Nishikinodzuki/tap` tap.
 - English and Russian documentation.

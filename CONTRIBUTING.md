@@ -39,7 +39,7 @@ macOS ties Accessibility permission to the code signature. Ad-hoc and unsigned b
 - `Sources/Log.swift` — `os.Logger` wrapper.
 - `Resources/Info.plist` — bundle metadata (`LSUIElement`, macOS 13+).
 - `scripts/build.sh` — universal build + signing.
-- `docs/` — GitHub Pages landing pages (EN/RU).
+- `docs/assets/` — screenshots, before/after images, and the demo GIF used by the READMEs.
 
 ## How it works
 
