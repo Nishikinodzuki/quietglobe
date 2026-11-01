@@ -55,6 +55,8 @@ brew install quietglobe
 
 After installation, open **QuietGlobe** from `/Applications` — it runs in the menu bar (no Dock icon).
 
+> **macOS asks for keychain access during install?** That is Git's `git-credential-osxkeychain`, not QuietGlobe. The tap is public; click **Deny** and the install should continue. If it does not, use the manual install below.
+
 ### Manual
 
 Download the latest `QuietGlobe-*.zip` from [GitHub Releases](https://github.com/Nishikinodzuki/quietglobe/releases/latest), unzip it, and move `QuietGlobe.app` to `/Applications`.
