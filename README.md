@@ -53,6 +53,8 @@ brew install quietglobe
 
 > Homebrew 7+ detects casks automatically. On older versions, add `--cask` to the install command.
 
+After installation, open **QuietGlobe** from `/Applications` — it runs in the menu bar (no Dock icon).
+
 ### Manual
 
 Download the latest `QuietGlobe-*.zip` from [GitHub Releases](https://github.com/Nishikinodzuki/quietglobe/releases/latest), unzip it, and move `QuietGlobe.app` to `/Applications`.
